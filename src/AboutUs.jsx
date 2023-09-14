@@ -1,109 +1,118 @@
-import React from "react";
-
+import React from 'react';
 
 function AboutUs() {
+	const member_bios = [
+		{
+			name: 'Bethany Torres',
 
-    const member_bios = [
-        {
-            name: "Bethany Torres",
+			profile_photo: '',
 
-            profile_photo: "",
+			bio: 'Bethany (nicknamed Fig) is a freelance illustrator and multimedia artist who has interest in all forms of expression and creativity. Currently a barista and studying full-time under the Pursuit Fellowship in a career in tech. Bethany uses she/they pronouns and speaks English and Spanish fluently.',
 
-            bio: "Bethany (nicknamed Fig) is a freelance illustrator and multimedia artist who has interest in all forms of expression and creativity. Currently a barista and studying full-time under the Pursuit Fellowship in a career in tech. Bethany uses she/they pronouns and speaks English and Spanish fluently.",
+			fun_fact:
+				'In her free time, Bethany enjoys Dungeons & Dragons with her friends, and has a passion for all things generally spooky. ',
 
-            fun_fact: "In her free time, Bethany enjoys Dungeons & Dragons with her friends, and has a passion for all things generally spooky. ",
+			githubLogo: '',
 
-            githubLogo: "",
+			githubUrl: '',
 
-            githubUrl: "",
+			linkedinLogo: '',
 
-            linkedinLogo: "",
+			linkedinUrl: '',
+		},
 
-            linkedinUrl: "",
-        },
+		{
+			name: 'Jameel Ibrahim',
 
-        {
-            name: "Jameel Ibrahim",
+			profile_photo: '',
 
-            profile_photo: "",
+			bio: "Hello there! I'm Jameel, a Pursuit fellow which is a Google-funded software engineering fellowship with a 9% acceptance rate. At Pursuit, I'm learning how to create web applications with technologies like JavaScript, HTML5, CSS3, APIs, React and Git.",
 
-            bio: "Hello there! I'm Jameel, a Pursuit fellow which is a Google-funded software engineering fellowship with a 9% acceptance rate. At Pursuit, I'm learning how to create web applications with technologies like JavaScript, HTML5, CSS3, APIs, React and Git.",
+			fun_fact: '',
 
-            fun_fact: "",
+			githubLogo: '',
 
-            githubLogo: "",
+			githubUrl: '',
 
-            githubUrl: "",
+			linkedinLogo: '',
 
-            linkedinLogo: "",
+			linkedinUrl: '',
+		},
 
-            linkedinUrl: "",
+		{
+			name: 'Tyller Mendoza',
 
+			profile_photo: '',
 
-        },
+			bio: 'Tyller ....',
 
-        {
-            name: "Tyller Mendoza",
+			fun_fact: '',
 
-            profile_photo: "",
+			githubLogo: '',
 
-            bio: "Tyller ....",
+			githubUrl: '',
 
-            fun_fact: "",
+			linkedinLogo: '',
 
-            githubLogo: "",
+			linkedinUrl: '',
+		},
 
-            githubUrl: "",
+		{
+			name: 'Gaspare Carollo',
 
-            linkedinLogo: "",
+			profile_photo: '',
 
-            linkedinUrl: "",
-        },
+			github_image: '',
 
-        {
-            name: "Gaspare Carollo",
+			linkedin_image: '',
 
-            profile_photo: "",
+			bio: '',
 
-            github_image: "",
+			fun_fact: '',
 
-            linkedin_image: "",
+			githubLogo: '',
 
-            bio: "",
+			githubUrl: '',
 
-            fun_fact: "",
+			linkedinLogo: '',
 
-            githubLogo: "",
+			linkedinUrl: '',
+		},
+	];
 
-            githubUrl: "",
-
-            linkedinLogo: "",
-
-            linkedinUrl: "",
-
-
-        }
-    ];
-
-    return (
-        <div>
-            {member_bios.map((aboutMe, index) => (
-
-                <div key={index}>
-                    <h4>{aboutMe.name}</h4>
-                    <img src={aboutMe.profile_photo} alt={`profile photo of ${aboutMe.name}`} />
-                    <p>{aboutMe.bio}</p>
-                    <p> href={aboutMe.fun_fact} </p>
-                    <a href={aboutMe.githubUrl} target="_blank" rel="noopener noreferrer"></a>
-                    <img src={aboutMe.githubLogo} alt={`Github logo for ${aboutMe.name}`} />
-                    <a href={aboutMe.linkedinUrl} target="_blank" rel="noopener noreferrer"></a>
-                    <img src={aboutMe.linkedinLogo} alt={`LinkedIn logo for ${aboutMe.name}`} />
-                </div>
-            ))}
-        </div>
-    )
+	return (
+		<div>
+			{member_bios.map((aboutMe, index) => (
+				<div key={index}>
+					<h4>{aboutMe.name}</h4>
+					<img
+						src={aboutMe.profile_photo}
+						alt={`profile photo of ${aboutMe.name}`}
+					/>
+					<p>{aboutMe.bio}</p>
+					<p> href={aboutMe.fun_fact} </p>
+					<a
+						href={aboutMe.githubUrl}
+						target="_blank"
+						rel="noopener noreferrer"
+					></a>
+					<img
+						src={aboutMe.githubLogo}
+						alt={`Github logo for ${aboutMe.name}`}
+					/>
+					<a
+						href={aboutMe.linkedinUrl}
+						target="_blank"
+						rel="noopener noreferrer"
+					></a>
+					<img
+						src={aboutMe.linkedinLogo}
+						alt={`LinkedIn logo for ${aboutMe.name}`}
+					/>
+				</div>
+			))}
+		</div>
+	);
 }
 
-
 export default AboutUs;
-
