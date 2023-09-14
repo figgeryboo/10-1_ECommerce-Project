@@ -1,118 +1,103 @@
-import React from 'react';
+
+
 
 function AboutUs() {
-	const member_bios = [
-		{
-			name: 'Bethany Torres',
 
-			profile_photo: '',
+    const member_bios = [
+        {
+            name: "Bethany Torres",
 
-			bio: 'Bethany (nicknamed Fig) is a freelance illustrator and multimedia artist who has interest in all forms of expression and creativity. Currently a barista and studying full-time under the Pursuit Fellowship in a career in tech. Bethany uses she/they pronouns and speaks English and Spanish fluently.',
+            profile_photo: "/Bethany.jpg",
 
-			fun_fact:
-				'In her free time, Bethany enjoys Dungeons & Dragons with her friends, and has a passion for all things generally spooky. ',
+            bio: "Bethany (nicknamed Fig) is a freelance illustrator and multimedia artist who has interest in all forms of expression and creativity. Currently a barista and studying full-time under the Pursuit Fellowship in a career in tech. Bethany uses she/they pronouns and speaks English and Spanish fluently.",
 
-			githubLogo: '',
+            fun_fact: "In her free time, Bethany enjoys Dungeons & Dragons with her friends, and has a passion for all things generally spooky. ",
 
-			githubUrl: '',
+            githubLogo: "/github.png",
 
-			linkedinLogo: '',
+            githubUrl: "",
 
-			linkedinUrl: '',
-		},
+            linkedinLogo: "/linked-in-alt.svg",
 
-		{
-			name: 'Jameel Ibrahim',
+            linkedinUrl: "https://www.linkedin.com/in/bethany-torres-a19bb0186/",
+        },
 
-			profile_photo: '',
+        {
+            name: "Jameel Ibrahim",
 
-			bio: "Hello there! I'm Jameel, a Pursuit fellow which is a Google-funded software engineering fellowship with a 9% acceptance rate. At Pursuit, I'm learning how to create web applications with technologies like JavaScript, HTML5, CSS3, APIs, React and Git.",
+            profile_photo: "/jameel.jpg",
 
-			fun_fact: '',
+            bio: "Hello there! I'm Jameel, a Pursuit fellow which is a Google-funded software engineering fellowship with a 9% acceptance rate. At Pursuit, I'm learning how to create web applications with technologies like JavaScript, HTML5, CSS3, APIs, React and Git.",
 
-			githubLogo: '',
+            fun_fact: "",
 
-			githubUrl: '',
+            githubLogo: "/github.png",
 
-			linkedinLogo: '',
+            githubUrl: "https://github.com/Jameel914",
 
-			linkedinUrl: '',
-		},
+            linkedinLogo: "/linked-in-alt.svg",
 
-		{
-			name: 'Tyller Mendoza',
+            linkedinUrl: "",
+        },
 
-			profile_photo: '',
+        {
+            name: "Tyller Mendoza",
 
-			bio: 'Tyller ....',
+            profile_photo: "/Tyller.jpg",
 
-			fun_fact: '',
+            bio: "Tyller is a self-taught developer with one year of entry-level experience in full-stack development and data analysis. worked on many different components.",
 
-			githubLogo: '',
+            fun_fact: "Trained in two types of martial arts.. Tae Kwon Do and Boxing.",
 
-			githubUrl: '',
+            githubLogo: "/github.png",
 
-			linkedinLogo: '',
+            githubUrl: "",
 
-			linkedinUrl: '',
-		},
+            linkedinLogo: "/linked-in-alt.svg",
 
-		{
-			name: 'Gaspare Carollo',
+            linkedinUrl: "https://www.linkedin.com/in/tyller-mendoza-61107120b/",
+        },
 
-			profile_photo: '',
+        {
+            name: "Gaspare Carollo",
 
-			github_image: '',
+            profile_photo: "/Gaspare.jpg",
 
-			linkedin_image: '',
+            bio: "Gaspare is currently a Pursuit fellow pursuing a career in the tech industry as a full stack web developer. His strong suit and passion lies in the realm of graphic design, video production, and writing.",
 
-			bio: '',
+            fun_fact: " On his spare time, Gaspare is a level 50 Pokemon Go player, a part-time video game player and streamer, and an avid collector of all things TMNT.",
 
-			fun_fact: '',
+            githubLogo: "/github.png",
 
-			githubLogo: '',
+            githubUrl: "https://github.com/gasparecarollo",
 
-			githubUrl: '',
+            linkedinLogo: "/linked-in-alt.svg",
 
-			linkedinLogo: '',
+            linkedinUrl: "https://www.linkedin.com/in/gcarollo85/",
 
-			linkedinUrl: '',
-		},
-	];
 
-	return (
-		<div>
-			{member_bios.map((aboutMe, index) => (
-				<div key={index}>
-					<h4>{aboutMe.name}</h4>
-					<img
-						src={aboutMe.profile_photo}
-						alt={`profile photo of ${aboutMe.name}`}
-					/>
-					<p>{aboutMe.bio}</p>
-					<p> href={aboutMe.fun_fact} </p>
-					<a
-						href={aboutMe.githubUrl}
-						target="_blank"
-						rel="noopener noreferrer"
-					></a>
-					<img
-						src={aboutMe.githubLogo}
-						alt={`Github logo for ${aboutMe.name}`}
-					/>
-					<a
-						href={aboutMe.linkedinUrl}
-						target="_blank"
-						rel="noopener noreferrer"
-					></a>
-					<img
-						src={aboutMe.linkedinLogo}
-						alt={`LinkedIn logo for ${aboutMe.name}`}
-					/>
-				</div>
-			))}
-		</div>
-	);
+        }
+    ];
+
+    return (
+        <div>
+            {member_bios.map((aboutMe, index) => (
+
+                <div key={index}>
+                    <h4>{aboutMe.name}</h4>
+                    <img src={aboutMe.profile_photo} alt={`profile photo of ${aboutMe.name}`} width={400} height={400} />
+                    <p>{aboutMe.bio}</p>
+                    <p> {aboutMe.fun_fact} </p>
+                    <a href={aboutMe.githubUrl} target="_blank" rel="noopener noreferrer"></a>
+                    <img src={aboutMe.githubLogo} alt={`Github logo for ${aboutMe.name}`} width={30} height={30} />
+                    <a href={aboutMe.linkedinUrl} target="_blank" rel="noopener noreferrer"></a>
+                    <img src={aboutMe.linkedinLogo} alt={`LinkedIn logo for ${aboutMe.name}`} width={30} height={30} />
+                </div>
+            ))}
+        </div>
+    )
 }
 
+
 export default AboutUs;
+
