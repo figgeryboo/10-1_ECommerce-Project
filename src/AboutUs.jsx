@@ -11,11 +11,11 @@ function AboutUs() {
 
             bio: "Bethany (nicknamed Fig) is a freelance illustrator and multimedia artist who has interest in all forms of expression and creativity. Currently a barista and studying full-time under the Pursuit Fellowship in a career in tech. Bethany uses she/they pronouns and speaks English and Spanish fluently.",
 
-            fun_fact: "In her free time, Bethany enjoys Dungeons & Dragons with her friends, and has a passion for all things generally spooky. ",
+            fun_fact: "In her free time, Bethany enjoys Dungeons & Dragons with their friends, and has a passion for all things generally spooky. ",
 
             githubLogo: "/github.png",
 
-            githubUrl: "",
+            githubUrl: "https://github.com/figgeryboo",
 
             linkedinLogo: "/linked-in-alt.svg",
 
@@ -37,7 +37,7 @@ function AboutUs() {
 
             linkedinLogo: "/linked-in-alt.svg",
 
-            linkedinUrl: "",
+            linkedinUrl: "https://www.linkedin.com/in/jameel-ibrahim-8a7a6b155/",
         },
 
         {
@@ -51,7 +51,7 @@ function AboutUs() {
 
             githubLogo: "/github.png",
 
-            githubUrl: "",
+            githubUrl: "https://github.com/tsunami-dev",
 
             linkedinLogo: "/linked-in-alt.svg",
 
