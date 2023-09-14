@@ -3,6 +3,8 @@ import AboutUs from './AboutUs.jsx';
 import './App.css';
 import DonateForm from './components/DonateForm';
 import DonateFeed from './components/DonateFeed.jsx';
+import Sidebar from './Components/Sidebar'
+import Footer from './Components/Footer'
 
 function App() {
 	const [donations, setDonations] = useState([]);
@@ -19,12 +21,14 @@ function App() {
 
 	return (
 		<>
+      <Sidebar />
 			<div>
 				<DonateForm onDonate={handleDonate} />
 				{donations.length > 0 && <DonateFeed donations={donations} />}
 			</div>
+      <Footer />
+
 		</>
 	);
-}
-
+        }
 export default App;
