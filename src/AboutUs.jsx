@@ -29,7 +29,7 @@ function AboutUs() {
 
             bio: "Hello there! I'm Jameel, a Pursuit fellow which is a Google-funded software engineering fellowship with a 9% acceptance rate. At Pursuit, I'm learning how to create web applications with technologies like JavaScript, HTML5, CSS3, APIs, React and Git.",
 
-            fun_fact: "",
+            fun_fact: "Is 3 time ladder racing climber champion, and his team holds the record for tallest structure in a human pyramid.",
 
             githubLogo: "/github.png",
 
