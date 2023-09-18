@@ -4,7 +4,7 @@ const DonateForm = ({ onDonate }) => {
 	const [formData, setFormData] = useState({
 		name: '',
 		email: '',
-		clothingType: '',
+		category: '',
 		quantity: 1,
 		size: '',
 		zipCode: '',
@@ -31,7 +31,7 @@ const DonateForm = ({ onDonate }) => {
 		setFormData({
 			name: '',
 			email: '',
-			clothingType: '',
+			category: '',
 			quantity: '',
 			size: '',
 			zipCode: '',
@@ -69,14 +69,20 @@ const DonateForm = ({ onDonate }) => {
 			</label>
 			<br />
 			<label>
-				Clothing Type/Brand:
-				<input
-					type="text"
-					name="clothingType"
-					value={formData.clothingType}
+				Category:
+				<select
+					name="category"
+					value={formData.category}
 					onChange={handleChange}
 					required
-				/>
+				>
+					<option value="">Select a category</option>
+					<option value="small">Men's</option>
+					<option value="medium">Women's</option>
+					<option value="large">Electronics</option>
+					<option value="x-large">Jewelry</option>
+					<option value="x-large">Other</option>
+				</select>
 			</label>
 			<br />
 			<label>
