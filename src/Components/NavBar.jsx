@@ -17,7 +17,7 @@ export default function NavBar({ setSearchTerm }) {
           <Link to="/" onClick={handleLinkClick}>
             products
           </Link>
-          <Link to="/AboutUs" onClick={handleLinkClick}>
+          <Link to="/About" onClick={handleLinkClick}>
             About Us
           </Link>
         </nav>
