@@ -7,7 +7,7 @@ const DonateFeed = ({ donations }) => {
       <ul>
         {donations.map((donation, index) => (
           <li key={index}>
-            Someone just donated {donation.quantity} {donation.clothingType} in a size {donation.size}!
+            Someone just donated something to {donation.category} in a size {donation.size}!
           </li>
         ))}
       </ul>
