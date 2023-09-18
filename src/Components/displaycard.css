@@ -1,11 +1,17 @@
-.card_container {
+.productCard {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.card_container {
     border-radius: 5px;
     border-color: thistle;
     border-style: groove;
-    width: 50%;
+    width: calc(33.33% - 10px);
+    margin-bottom: 20px;
     text-align: center;
-    padding: 15px;
 }
 
 .img-src {
