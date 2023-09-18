@@ -1,5 +1,5 @@
-
-
+import React from "react";
+import "./AboutUs.css"
 
 function AboutUs() {
 
@@ -80,7 +80,7 @@ function AboutUs() {
     ];
 
     return (
-        <div>
+        <div className="profile-card">
             {member_bios.map((aboutMe, index) => (
 
                 <div key={index}>

@@ -1,6 +1,8 @@
 import React from 'react';
 import './displaycard.css';
 import { useState, useEffect } from 'react';
+import { BsCart4 } from "react-icons/bs"
+import { TbShoppingCartOff } from "react-icons/tb"
 
 function DisplayCard({ onAddToCart, onRemoveFromCart, cart }) {
 	const [allProducts, setAllProducts] = useState([]);
@@ -17,8 +19,10 @@ function DisplayCard({ onAddToCart, onRemoveFromCart, cart }) {
 		return (
 			<div className="card_container" key={eachProductObj.id}>
 				<img
+					className='img-src'
 					src={eachProductObj.image}
 					alt={`Image of Product: ${eachProductObj.title}`}
+
 				/>
 
 				<h4>
@@ -38,15 +42,19 @@ function DisplayCard({ onAddToCart, onRemoveFromCart, cart }) {
 						{`Product Description: ${eachProductObj.description}`}
 					</div>
 				</h4>
-				<button onClick={() => onAddToCart(eachProductObj)} disabled={isInCart}>
-					Add to Cart
+				<button
+					className='add-bttn'
+					onClick={() => onAddToCart(eachProductObj)}
+					disabled={isInCart}>
+					Add to Cart <BsCart4 />
 				</button>
 
 				<button
+					className='remove-bttn'
 					onClick={() => onRemoveFromCart(eachProductObj)}
 					disabled={!isInCart}
 				>
-					Remove from Cart
+					Remove from Cart <TbShoppingCartOff />
 				</button>
 			</div>
 		);
