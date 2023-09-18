@@ -11,7 +11,7 @@ function Footer() {
       <div className="col-lg-6 col-md-12 mb-4">
         <h5 className="mb-3" style={{letterSpacing: "2px", color: "#818963"}}>Thrift Shop - one stop fashion site</h5>
         <p>
-          Our store offers a few different ways for customers to get to products.Giving our customers multiple ways to view a product 
+          Our store offers a few different ways for customers to get to products. Giving our customers multiple ways to view a product 
           helps them make that all-important decision to purchase.
         </p>
     </div>
