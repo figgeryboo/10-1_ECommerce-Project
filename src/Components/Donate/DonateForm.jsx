@@ -82,11 +82,11 @@ const DonateForm = ({ onDonate }) => {
 					required
 				>
 					<option value="">Select a category</option>
-					<option value="small">Men's</option>
-					<option value="medium">Women's</option>
-					<option value="large">Electronics</option>
-					<option value="x-large">Jewelry</option>
-					<option value="x-large">Other</option>
+					<option value="Men's">Men's</option>
+					<option value="Women's">Women's</option>
+					<option value="Electronics">Electronics</option>
+					<option value="Jewelry">Jewelry</option>
+					<option value="Other">Other</option>
 				</select>
 			</label>
 			<br />
@@ -99,11 +99,11 @@ const DonateForm = ({ onDonate }) => {
 					required
 				>
 					<option value="">Select a size</option>
-					<option value="small">Small</option>
-					<option value="medium">Medium</option>
-					<option value="large">Large</option>
-					<option value="x-large">X-Large</option>
-					<option value="x-large">One Size</option>
+					<option value="Small">Small</option>
+					<option value="Medium">Medium</option>
+					<option value="Large">Large</option>
+					<option value="X-Large">X-Large</option>
+					<option value="One Size">One Size</option>
 				</select>
 			</label>
 			<br />
