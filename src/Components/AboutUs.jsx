@@ -1,6 +1,7 @@
 import React from "react";
 import "./AboutUs.css"
 
+
 function AboutUs() {
 
     const member_bios = [
@@ -80,7 +81,9 @@ function AboutUs() {
     ];
 
     return (
+
         <div className="profile-container">
+
             {member_bios.map((aboutMe, index) => (
 
                 <div className="profile-card" key={index}>
