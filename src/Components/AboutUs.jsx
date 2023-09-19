@@ -80,18 +80,20 @@ function AboutUs() {
     ];
 
     return (
-        <div className="profile-card">
+        <div className="profile-container">
             {member_bios.map((aboutMe, index) => (
 
-                <div key={index}>
+                <div className="profile-card" key={index}>
                     <h4>{aboutMe.name}</h4>
                     <img src={aboutMe.profile_photo} alt={`profile photo of ${aboutMe.name}`} width={400} height={400} />
                     <p>{aboutMe.bio}</p>
                     <p> {aboutMe.fun_fact} </p>
-                    <a href={aboutMe.githubUrl} target="_blank" rel="noopener noreferrer"></a>
-                    <img src={aboutMe.githubLogo} alt={`Github logo for ${aboutMe.name}`} width={30} height={30} />
-                    <a href={aboutMe.linkedinUrl} target="_blank" rel="noopener noreferrer"></a>
-                    <img src={aboutMe.linkedinLogo} alt={`LinkedIn logo for ${aboutMe.name}`} width={30} height={30} />
+                    <a href={aboutMe.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <img src={aboutMe.githubLogo} alt={`Github logo for ${aboutMe.name}`} width={30} height={30} />
+                    </a>
+                    <a href={aboutMe.linkedinUrl} target="_blank" rel="noopener noreferrer">
+                        <img src={aboutMe.linkedinLogo} alt={`LinkedIn logo for ${aboutMe.name}`} width={30} height={30} />
+                    </a>
                 </div>
             ))}
         </div>
