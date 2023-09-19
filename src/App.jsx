@@ -46,6 +46,7 @@ function App() {
           element={
             <>
               <SearchBar />
+              <Sidebar />
               <DonateForm onDonate={handleDonate} />
               {donations.length > 0 && <DonateFeed donations={donations} />}
               <DisplayCard
@@ -60,7 +61,6 @@ function App() {
         />
         <Route path="/about" element={<AboutUs />} />
       </Routes>
-      <Sidebar />
       <Footer />
     </>
   );
