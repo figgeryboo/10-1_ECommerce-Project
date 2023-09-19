@@ -46,7 +46,6 @@ function App() {
           element={
             <>
               <SearchBar />
-              <Sidebar />
               <DonateForm onDonate={handleDonate} />
               {donations.length > 0 && <DonateFeed donations={donations} />}
               <DisplayCard
