@@ -1,54 +1,69 @@
 import { useState } from 'react';
-import AboutUs from './components/AboutUs.jsx';
-import DonateForm from './components/Donate/DonateForm.jsx';
+import { Route, Routes } from 'react-router-dom';
+import AboutUs from './Components/AboutUs.jsx';
+import DonateForm from './Components/Donate/DonateForm.jsx';
 import DonateFeed from './components/Donate/DonateFeed.jsx';
-import Sidebar from './Components/Sidebar';
-import Footer from './Components/Footer';
-import DisplayCard from './components/DisplayCard.jsx';
-import Cart from './components/Cart/Cart.jsx';
-import CheckoutPage from './components/Cart/CheckoutPage.jsx';
+import Sidebar from './Components/Navigation/Sidebar.jsx';
+import Footer from './Components/Navigation/Footer.jsx';
+import DisplayCard from './Components/DisplayCard.jsx';
+import Cart from './Components/Cart/Cart.jsx';
+import CheckoutPage from './Components/Cart/CheckoutPage.jsx';
 import './App.css';
+import NavBar from './Components/Navigation/NavBar.jsx';
+import SearchBar from './Components/Navigation/SearchBar.jsx';
 
 function App() {
-	const [donations, setDonations] = useState([]);
-	const [cart, setCart] = useState([]);
+  const [donations, setDonations] = useState([]);
+  const [cart, setCart] = useState([]);
 
-	const handleDonate = (formData) => {
-		const updatedDonations = [...donations, formData];
+  const handleDonate = (formData) => {
+    const updatedDonations = [...donations, formData];
 
-		if (updatedDonations.length > 5) {
-			updatedDonations.shift();
-		}
+    if (updatedDonations.length > 5) {
+      updatedDonations.shift();
+    }
 
-		setDonations(updatedDonations);
-	};
+    setDonations(updatedDonations);
+  };
 
-	const handleAddToCart = (product) => {
-		setCart([...cart, product]);
-	};
+  const handleAddToCart = (product) => {
+    setCart([...cart, product]);
+  };
 
-	const handleRemoveFromCart = (product) => {
-		const updatedCart = cart.filter((item) => item.id !== product.id);
-		setCart(updatedCart);
-	};
+  const handleRemoveFromCart = (product) => {
+    const updatedCart = cart.filter((item) => item.id !== product.id);
+    setCart(updatedCart);
+  };
 
-	return (
-		<>
-			<Sidebar />
-			<div>
-				<DonateForm onDonate={handleDonate} />
-				{donations.length > 0 && <DonateFeed donations={donations} />}
-				<DisplayCard
-					onAddToCart={handleAddToCart}
-					onRemoveFromCart={handleRemoveFromCart}
-					cart={cart}
-				/>
-				<Cart cart={cart} removeFromCart={handleRemoveFromCart} />
-				<CheckoutPage cart={cart} removeFromCart={handleRemoveFromCart} />
-			</div>
-			<Footer />
-		</>
-	);
+ 
+
+  return (
+    <>
+      <NavBar />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <SearchBar />
+              <DonateForm onDonate={handleDonate} />
+              {donations.length > 0 && <DonateFeed donations={donations} />}
+              <DisplayCard
+                onAddToCart={handleAddToCart}
+                onRemoveFromCart={handleRemoveFromCart}
+                cart={cart}
+              />
+              <Cart cart={cart} removeFromCart={handleRemoveFromCart} />
+              <CheckoutPage cart={cart} removeFromCart={handleRemoveFromCart} />
+            </>
+          }
+        />
+        <Route path="/about" element={<AboutUs />} />
+      </Routes>
+      <Sidebar />
+      <Footer />
+    </>
+  );
 }
 
 export default App;

@@ -26,22 +26,24 @@ function DisplayCard({ onAddToCart, onRemoveFromCart, cart }) {
 				/>
 
 				<h4>
-					<div className="productId" id={eachProductObj.id}>
-						{`Product ID: ${eachProductObj.id}`}
-					</div>
 					<div className="productName">
-						{`Product Name: ${eachProductObj.title}`}
+						{`${eachProductObj.title}`}
 					</div>
+					</h4>
 					<div className="productPrice">
 						{`Product Price: ${eachProductObj.price}`}
+			
 					</div>
-					<div className="productCategory">
-						{`Product Category: ${eachProductObj.category}`}
-					</div>
+					<br/>
 					<div className="Product Description">
 						{`Product Description: ${eachProductObj.description}`}
 					</div>
-				</h4>
+					
+					<div className="productCategory">
+						{`Product Category: ${eachProductObj.category}`}
+					</div>
+				
+					
 				<button
 					className='add-bttn'
 					onClick={() => onAddToCart(eachProductObj)}

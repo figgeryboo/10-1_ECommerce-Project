@@ -1,11 +1,18 @@
-.card_container {
+.productCard {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px;
+
+}
+
+.card_container {
     border-radius: 5px;
     border-color: thistle;
     border-style: groove;
-    width: 50%;
+    width: calc(33.33% - 10px);
+    margin-bottom: 20px;
     text-align: center;
-    padding: 15px;
 }
 
 .img-src {
@@ -15,15 +22,18 @@
     width: 150px;
     height: 150px;
     padding: 5px;
+    margin-top: 10px;
 
 }
 
 .add-bttn {
-
-    background-image: ;
+    border: 1px solid;
+    border-radius: 4px;
+    border-color: thistle;
 }
 
 .remove-bttn {
-
-    background-image: ;
+    border: 1px solid;
+    border-radius: 4px;
+    border-color: thistle;
 }

@@ -1,0 +1,14 @@
+.profile-card {
+
+    border-style: groove;
+    border-radius: 3px;
+    border-color: gold;
+    padding: 5px;
+    width: 50%;
+    font-family: fantasy;
+    color: greenyellow;
+    background-color: black;
+    font-size: 25px;
+
+
+}
