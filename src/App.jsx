@@ -46,8 +46,6 @@ function App() {
           element={
             <>
               <SearchBar />
-              <DonateForm onDonate={handleDonate} />
-              {donations.length > 0 && <DonateFeed donations={donations} />}
               <DisplayCard
                 onAddToCart={handleAddToCart}
                 onRemoveFromCart={handleRemoveFromCart}
@@ -60,8 +58,7 @@ function App() {
         />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/Sidebar" element={<Sidebar/>} />
-        <Route path="/Donate" element={<DonateForm onDonate={handleDonate} />
-}/>
+        <Route path="/Donate" element={<DonateForm onDonate={handleDonate} />} />
       </Routes>
       <Footer />
     </>
