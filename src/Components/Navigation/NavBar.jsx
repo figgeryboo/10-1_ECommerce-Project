@@ -28,6 +28,10 @@ export default function NavBar({ setSearchTerm }) {
           <Link to="/Sidebar" onClick={handleLinkClick}>
             Filter
           </Link>
+          <br/>
+          <Link to="/Donate" onClick={handleLinkClick}>
+            Donate Here
+          </Link>
         </nav>
       </div>
     </>
