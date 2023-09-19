@@ -32,6 +32,7 @@ export default function NavBar({ setSearchTerm }) {
           <Link to="/Donate" onClick={handleLinkClick}>
             Donate Here
           </Link>
+          <br/>
         </nav>
       </div>
     </>

@@ -13,59 +13,58 @@ import NavBar from './Components/Navigation/NavBar.jsx';
 import SearchBar from './Components/Navigation/SearchBar.jsx';
 
 function App() {
-  const [donations, setDonations] = useState([]);
-  const [cart, setCart] = useState([]);
+	const [donations, setDonations] = useState([]);
+	const [cart, setCart] = useState([]);
 
-  const handleDonate = (formData) => {
-    const updatedDonations = [...donations, formData];
+	const handleDonate = (formData) => {
+		const updatedDonations = [...donations, formData];
 
-    if (updatedDonations.length > 5) {
-      updatedDonations.shift();
-    }
+		if (updatedDonations.length > 5) {
+			updatedDonations.shift();
+		}
 
-    setDonations(updatedDonations);
-  };
+		setDonations(updatedDonations);
+	};
 
-  const handleAddToCart = (product) => {
-    setCart([...cart, product]);
-  };
+	const handleAddToCart = (product) => {
+		setCart([...cart, product]);
+	};
 
-  const handleRemoveFromCart = (product) => {
-    const updatedCart = cart.filter((item) => item.id !== product.id);
-    setCart(updatedCart);
-  };
+	const handleRemoveFromCart = (product) => {
+		const updatedCart = cart.filter((item) => item.id !== product.id);
+		setCart(updatedCart);
+	};
 
- 
-
-  return (
-    <>
-      <NavBar />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <SearchBar />
-              <DonateForm onDonate={handleDonate} />
-              {donations.length > 0 && <DonateFeed donations={donations} />}
-              <DisplayCard
-                onAddToCart={handleAddToCart}
-                onRemoveFromCart={handleRemoveFromCart}
-                cart={cart}
-              />
-              <Cart cart={cart} removeFromCart={handleRemoveFromCart} />
-              <CheckoutPage cart={cart} removeFromCart={handleRemoveFromCart} />
-            </>
-          }
-        />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/Sidebar" element={<Sidebar/>} />
-        <Route path="/Donate" element={<DonateForm onDonate={handleDonate} />
-}/>
-      </Routes>
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<NavBar />
+			<Routes>
+				<Route
+					path="/"
+					element={
+						<>
+							<SearchBar />
+							{donations.length > 0 && <DonateFeed donations={donations} />}
+							<Cart cart={cart} removeFromCart={handleRemoveFromCart} />
+							<DisplayCard
+								onAddToCart={handleAddToCart}
+								onRemoveFromCart={handleRemoveFromCart}
+								cart={cart}
+							/>
+							<CheckoutPage cart={cart} removeFromCart={handleRemoveFromCart} />
+						</>
+					}
+				/>
+				<Route path="/about" element={<AboutUs />} />
+				<Route path="/Sidebar" element={<Sidebar />} />
+				<Route
+					path="/Donate"
+					element={<DonateForm onDonate={handleDonate} />}
+				/>
+			</Routes>
+			<Footer />
+		</>
+	);
 }
 
 export default App;

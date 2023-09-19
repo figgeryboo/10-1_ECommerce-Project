@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./DonateForm.css"
+import { Link } from 'react-router-dom';
 
 const DonateForm = ({ onDonate }) => {
 	const [formData, setFormData] = useState({
@@ -37,6 +38,9 @@ const DonateForm = ({ onDonate }) => {
 			size: '',
 			zipCode: '',
 		});
+
+		alert("Thank you for your donation! One of our dedicated team members will contact you soon with drop-off details for a partner near you!");
+
 	};
 
 	const handleDismiss = () => {
@@ -131,15 +135,7 @@ const DonateForm = ({ onDonate }) => {
 			<br />
             <br />
 			<button type="submit">Donate</button>
-
-			{submitted && (
-				<div className="notification">
-					<br />
-					Thank you for your donation! One of our dedicated team members will
-					contact you soon with drop-off details for a partner near you!
-					<button onClick={handleDismiss}>x</button>
-				</div>
-			)}
+			<Link to="/">Go Back</Link> 
 		</form>
 	);
 };
