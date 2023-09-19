@@ -40,8 +40,9 @@ function CheckoutPage({ cart }) {
     return (
         <div>
             <h2>Checkout</h2>
-            <div>Total: ${total}</div>
             <CheckoutForm handleCheckout={handleCheckout} formData={formData} />
+            <br/>
+            <div>Total: ${total}</div>
         </div>
     );
 }
