@@ -43,8 +43,10 @@ function App() {
 					path="/"
 					element={
 						<>
-							<SearchBar />
+
 							{donations.length > 0 && <DonateFeed donations={donations} />}
+
+							<SearchBar />
 							<Cart cart={cart} removeFromCart={handleRemoveFromCart} />
 							<DisplayCard
 								onAddToCart={handleAddToCart}
