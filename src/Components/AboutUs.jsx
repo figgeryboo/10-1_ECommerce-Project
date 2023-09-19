@@ -87,7 +87,7 @@ function AboutUs() {
             {member_bios.map((aboutMe, index) => (
 
                 <div className="profile-card" key={index}>
-                    <h4>{aboutMe.name}</h4>
+                    <h4> {aboutMe.name}</h4>
                     <img src={aboutMe.profile_photo} alt={`profile photo of ${aboutMe.name}`} width={400} height={400} />
                     <p>{aboutMe.bio}</p>
                     <p> {aboutMe.fun_fact} </p>
