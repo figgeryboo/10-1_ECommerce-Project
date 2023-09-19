@@ -20,11 +20,18 @@ export default function NavBar({ setSearchTerm }) {
           <Link to="/" onClick={handleLinkClick}>
             Products
           </Link>
+          <br/>
           <Link to="/about" onClick={handleLinkClick}>
             About Us
+          </Link>
+          <br/>
+          <Link to="/Sidebar" onClick={handleLinkClick}>
+            Filter
           </Link>
         </nav>
       </div>
     </>
   );
 }
+
+

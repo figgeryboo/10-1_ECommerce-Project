@@ -60,6 +60,7 @@ function App() {
           }
         />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/Sidebar" element={<Sidebar/>} />
       </Routes>
       <Footer />
     </>
