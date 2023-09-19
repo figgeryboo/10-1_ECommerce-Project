@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import topLogo from "../assets/img/logo.png"
+import topLogo from "/src/assets/img/logo.png"
 import SearchBar from "./SearchBar";
 
 export default function NavBar({ setSearchTerm }) {
@@ -15,13 +15,12 @@ export default function NavBar({ setSearchTerm }) {
         </Link>
         <nav>
           <Link to="/" onClick={handleLinkClick}>
-            products
+            Products
           </Link>
           <Link to="/about" onClick={handleLinkClick}>
-            Aboutus
+            About Us
           </Link>
         </nav>
-        <SearchBar/>
       </div>
     </>
   );
