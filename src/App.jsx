@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import AboutUs from './components/AboutUs.jsx';
+import AboutUs from './components/AboutUs.jsx'
 import DonateForm from './components/Donate/DonateForm.jsx';
 import DonateFeed from './components/Donate/DonateFeed.jsx';
 import Sidebar from './Components/Sidebar';
@@ -46,6 +46,7 @@ function App() {
 				<Cart cart={cart} removeFromCart={handleRemoveFromCart} />
 				<CheckoutPage cart={cart} removeFromCart={handleRemoveFromCart} />
 			</div>
+			<AboutUs />
 			<Footer />
 		</>
 	);
