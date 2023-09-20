@@ -11,6 +11,7 @@
 - [Configuration](#configuration)
 - [Contributing](#contributing)
 - [License](#license)
+- [Deployment](#deployment)
 
 ## About
 
@@ -53,10 +54,18 @@ Contributions are welcome! If you encounter any bugs or have suggestions for imp
 - Built by Git Thrifty Dev Team
 
 Bethany Torres
+
 Jameel Ibrahim
+
 Tyller Mendoza
+
 Gaspare Carollo 
+
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+## Deployment 
+
+Deployed currently via [Netlify](https://git-thrifty.netlify.app/).
