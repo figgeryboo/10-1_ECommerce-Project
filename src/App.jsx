@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import AboutUs from './Components/AboutUs.jsx';
 import DonateForm from './Components/Donate/DonateForm.jsx';
-import DonateFeed from './components/Donate/DonateFeed.jsx';
+import DonateFeed from './Components/Donate/DonateFeed.jsx';
 import Sidebar from './Components/Navigation/Sidebar.jsx';
 import Footer from './Components/Navigation/Footer.jsx';
 import DisplayCard from './Components/DisplayCard.jsx';
